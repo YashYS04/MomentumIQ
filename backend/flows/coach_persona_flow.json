@@ -1,0 +1,93 @@
+{
+  "id": "coach_persona_flow",
+  "name": "Coach Persona Chat Flow",
+  "description": "LangFlow visual representation of the multi-persona tactical advisor chat system.",
+  "data": {
+    "nodes": [
+      {
+        "id": "chat-input-2",
+        "type": "ChatInput",
+        "data": {
+          "node": {
+            "template": {
+              "message": ""
+            }
+          }
+        }
+      },
+      {
+        "id": "persona-prompter-2",
+        "type": "PersonaPrompter",
+        "data": {
+          "node": {
+            "template": {
+              "persona": "expert",
+              "system_prompt": {
+                "expert": "You are Coach Marcello, a high-level UEFA Pro license soccer manager. Explain tactics in deep technical details: half-spaces, inverted runs, counterpress triggers, low block geometry. Use professional coaching diagrams and tactical terminology.",
+                "casual": "You are Coach Ted, an encouraging and friendly coach. Explain soccer tactics using simple analogies to other sports, video games, or daily life. Do not use complex jargon without breaking it down simply.",
+                "gamer": "You are Coach Alex, a FIFA and Football Manager pro player. Explain soccer tactics using gaming terms: formations (e.g. 4-2-3-1), high-pressing depth, defensive width sliders, player roles (e.g. shadow striker, box-to-box, sweeper keeper)."
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "prompt-template-2",
+        "type": "PromptTemplate",
+        "data": {
+          "node": {
+            "template": "System Instruction: {persona-prompter-2.system_prompt}\n\nFan Query: {chat-input-2.message}\n\nCoach Response:",
+            "chat-input-2.message": "",
+            "persona-prompter-2.system_prompt": ""
+          }
+        }
+      },
+      {
+        "id": "ollama-granite-2",
+        "type": "OllamaGranite",
+        "data": {
+          "node": {
+            "template": {
+              "model": "granite3.3:2b",
+              "prompt": "{prompt-template-2.output}",
+              "temperature": 0.7
+            }
+          }
+        }
+      },
+      {
+        "id": "chat-output-2",
+        "type": "ChatOutput",
+        "data": {
+          "node": {
+            "template": {
+              "response": "{ollama-granite-2.output}"
+            }
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "persona-prompter-2",
+        "target": "prompt-template-2",
+        "field": "persona-prompter-2.system_prompt"
+      },
+      {
+        "source": "chat-input-2",
+        "target": "prompt-template-2",
+        "field": "chat-input-2.message"
+      },
+      {
+        "source": "prompt-template-2",
+        "target": "ollama-granite-2",
+        "field": "prompt"
+      },
+      {
+        "source": "ollama-granite-2",
+        "target": "chat-output-2",
+        "field": "response"
+      }
+    ]
+  }
+}

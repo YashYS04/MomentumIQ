@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-bg-ivory: #FAF8F5;
+  --color-bg-card-light: #FFFFFF;
+  --color-bg-cream: #F2EDE4;
+  
+  --color-forest-green: #0D2C1E;
+  --color-forest-green-muted: #334E40;
+  --color-gold-accent: #C29F5C;
+  --color-border-warm: rgba(13, 44, 30, 0.08);
+
+  --font-display: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --animate-fade-in: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-up: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-pulse-flow: pulseFlow 3s linear infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseFlow {
+  0% {
+    stroke-dasharray: 150;
+    stroke-dashoffset: 150;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 150;
+    stroke-dashoffset: -150;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #F2EDE4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C29F5C;
+}
+
+body {
+  background-color: #FAF8F5;
+  color: #334E40;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+  
+  /* Subtle publication grid background overlay */
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(194, 159, 92, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(13, 44, 30, 0.02) 0%, transparent 40%),
+    linear-gradient(rgba(13, 44, 30, 0.003) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 44, 30, 0.003) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 60px 60px, 60px 60px;
+}
+
+/* Base custom styles for interactive whiteboard tokens and elements */
+.player-token {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: grab;
+  user-select: none;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(13, 44, 30, 0.15);
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s ease;
+}
+
+.player-token:active {
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.18);
+  box-shadow: 0 8px 20px rgba(13, 44, 30, 0.25);
+  z-index: 20;
+}
+
+.player-token.team-red {
+  background: linear-gradient(135deg, #0D2C1E 0%, #05140e 100%);
+  border: 1.5px solid #F2EDE4;
+  color: #ffffff;
+}
+
+.player-token.team-blue {
+  background: linear-gradient(135deg, #C29F5C 0%, #9e7f43 100%);
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
+}
+
+.ball-token {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 60%, #F2EDE4 100%);
+  border: 1.5px solid #0D2C1E;
+  cursor: grab;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  box-shadow: 0 4px 8px rgba(13, 44, 30, 0.15);
+}
+
+.ball-token:active {
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Glossary Inline Tooltips matching forest green editorial theme */
+.glossary-term {
+  border-bottom: 1.5px dotted #C29F5C;
+  color: #0D2C1E;
+  cursor: help;
+  position: relative;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.glossary-term:hover {
+  color: #C29F5C;
+  border-bottom-color: #0D2C1E;
+}
+
+.glossary-tooltip-card {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  width: 220px;
+  background: #FFFFFF;
+  border: 1px solid rgba(13, 44, 30, 0.1);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 10px 25px rgba(13, 44, 30, 0.12);
+  color: #334E40;
+  font-size: 11.5px;
+  line-height: 1.45;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 100;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: normal;
+  text-align: left;
+}
+
+.glossary-term:hover .glossary-tooltip-card {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  pointer-events: auto;
+}

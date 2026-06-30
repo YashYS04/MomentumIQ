@@ -1,0 +1,104 @@
+# IFAB Laws of the Game - PitchPulse Reference Guide
+
+This reference document compiles the official rules, criteria, and interpretations for Offsides, Handballs, Penalty Kicks, and VAR (Video Assistant Referee) protocols as defined by the International Football Association Board (IFAB).
+
+---
+
+## LAW 11: OFFSIDE
+
+### 1. Offside Position
+It is not an offence to be in an offside position.
+A player is in an offside position if:
+- any part of the head, torso or feet is in the opponent's half (excluding the half-way line) and
+- any part of the head, torso or feet is nearer to the opponents' goal line than both the ball and the second-last opponent.
+
+The hands and arms of all players, including the goalkeepers, are not considered when determining offside. For the purposes of determining offside, the upper boundary of the arm is in line with the bottom of the armpit.
+
+A player is NOT in an offside position if they are level with:
+- the second-last opponent or
+- the last two opponents.
+
+### 2. Offside Offence
+A player in an offside position at the moment the ball is played or touched by a teammate is only penalised on becoming involved in active play by:
+- **Interfering with play**: by playing or touching a ball passed or touched by a teammate.
+- **Interfering with an opponent**: by preventing an opponent from playing or able to play the ball by clearly obstructing their line of vision, or challenging them for the ball, or clearly attempting to play a close ball when this action impacts on an opponent, or making an obvious action which clearly impacts on the ability of an opponent to play the ball.
+- **Gaining an advantage**: by playing the ball or interfering with an opponent when it has rebounded or deflected off the goalpost, crossbar, match official or an opponent, or been deliberately saved by any opponent.
+
+### 3. Deliberate Play vs. Deflections
+A player in an offside position receiving the ball from an opponent who **deliberately plays** the ball (including deliberate handball) is NOT considered to have gained an advantage, unless it was a deliberate save by any opponent.
+
+'Deliberate play' is when a player has control of the ball with the possibility of:
+- passing the ball to a teammate; or
+- gaining possession of the ball; or
+- clearing the ball (e.g. by kicking or heading it).
+
+If the pass, attempt to gain possession or clearance by the player in control of the ball is inaccurate or unsuccessful, this does not negate the fact that the player 'deliberately played' the ball.
+
+The following criteria should be used as indicators that a player was in control of the ball and, as a result, 'deliberately played' the ball:
+- The ball travelled from distance and the player had a clear view of it.
+- The ball was not moving quickly.
+- The direction of the ball was not unexpected.
+- The player had time to coordinate their body movement (i.e. it was not an instinctive reaction or deflection).
+
+---
+
+## LAW 12: FOULS AND MISCONDUCT
+
+### 1. Handling the Ball (Handball)
+For the purposes of determining handball offences, the upper boundary of the arm is in line with the bottom of the armpit. Not every touch of a player's hand/arm with the ball is an offence.
+
+It is an offence if a player:
+- **Deliberately touches** the ball with their hand/arm, for example moving the hand/arm towards the ball.
+- Touches the ball with their hand/arm when it has **made their body unnaturally bigger**. A player is considered to have made their body unnaturally bigger when the position of their hand/arm is not a consequence of, or justifiable by, the player’s body movement for that specific situation. By having their hand/arm in such a position, the player takes a risk of their hand/arm being hit by the ball and being penalised.
+- **Scores in the opponents' goal**:
+  - directly from their hand/arm, even if accidental, including by the goalkeeper.
+  - immediately after the ball has touched their hand/arm, even if accidental.
+
+### 2. Non-Offence Exceptions (No Handball)
+Except for the above offences, it is NOT an offence if the ball touches a player's hand/arm:
+- directly from the head or body (including the foot) of the player themselves.
+- directly from the head or body (including the foot) of another player who is close.
+- if the hand/arm is close to the body and does not make the body unnaturally bigger.
+- when a player falls and the hand/arm is between the body and the ground to support the body, but not extended laterally or vertically away from the body.
+
+---
+
+## LAW 14: THE PENALTY KICK
+
+A penalty kick is awarded if a player commits a direct free kick offence inside their penalty area.
+
+### 1. Goalkeeper Position
+When the ball is kicked, the defending goalkeeper must have at least part of one foot touching, or in line with, or behind, the goal line; they cannot stand in front of the goal line. They must remain on the goal line, facing the kicker, between the goalposts, without touching the goalposts, crossbar or goal net, until the ball has been kicked.
+
+### 2. Goalkeeper Conduct
+The goalkeeper must not behave in a way that unfairly distracts the kicker, e.g. delay the taking of the kick or touch the goalposts, crossbar or goal net. Goalkeepers are warned for their first infraction and yellow-carded for subsequent ones.
+
+---
+
+## VAR (VIDEO ASSISTANT REFEREE) PROTOCOL
+
+The VAR protocol is based on the principle of **"minimum interference, maximum benefit"**.
+
+### 1. Reviewable Decisive Categories
+A video review (VAR) is only permitted for four categories of match-changing decisions/incidents:
+1. **Goal / No Goal**:
+   - Offence by the attacking team in the build-up to or scoring of the goal (handball, foul, offside, etc.).
+   - Ball out of play prior to the goal.
+2. **Penalty / No Penalty**:
+   - Incorrectly awarding a penalty kick.
+   - Non-award of a penalty kick.
+   - Attacking team offence in the build-up to the penalty incident.
+   - Ball out of play prior to the incident.
+3. **Direct Red Card** (not second yellow card):
+   - Serious foul play.
+   - Violent conduct.
+   - Spitting/biting.
+   - Denying an obvious goalscoring opportunity (DOGSO).
+4. **Mistaken Identity**:
+   - The referee cautions or sends off the wrong player.
+
+### 2. Standard of Review
+The original decision given by the referee will NOT be altered unless the video review shows a **"clear and obvious error"** or a **"serious missed incident"**.
+
+Only the referee can initiate a review; the VAR (and other match officials) can only recommend a review to the referee.
+For factual decisions (e.g. position of a foul inside/outside the penalty area, offside position, ball out of play), the referee can make a decision based on the information from the VAR without an On-Field Review (OFR). For subjective decisions (e.g. intensity of a foul, deliberate handball), the referee should conduct an On-Field Review.

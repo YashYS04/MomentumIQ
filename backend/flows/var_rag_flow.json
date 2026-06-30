@@ -1,0 +1,96 @@
+{
+  "id": "var_rag_flow",
+  "name": "VAR Rule RAG Flow",
+  "description": "LangFlow visual representation of RAG rule verification using Docling and Granite LLM.",
+  "data": {
+    "nodes": [
+      {
+        "id": "chat-input-1",
+        "type": "ChatInput",
+        "data": {
+          "node": {
+            "template": {
+              "message": ""
+            }
+          }
+        }
+      },
+      {
+        "id": "docling-retriever-1",
+        "type": "DoclingRetriever",
+        "data": {
+          "node": {
+            "template": {
+              "query": "{chat-input-1.message}",
+              "rule_source": "backend/rules/ifab_laws.txt"
+            }
+          }
+        }
+      },
+      {
+        "id": "prompt-template-1",
+        "type": "PromptTemplate",
+        "data": {
+          "node": {
+            "template": {
+              "template": "You are PitchPulse VAR Assistant, an expert, objective FIFA referee. Ground yourself in these IFAB rules:\n\n{docling-retriever-1.output}\n\nFan Query: {chat-input-1.message}\n\nExplain the decision clearly. State if it was a 'clear and obvious error' and show your step-by-step reasoning citing the law.",
+              "chat-input-1.message": "",
+              "docling-retriever-1.output": ""
+            }
+          }
+        }
+      },
+      {
+        "id": "ollama-granite-1",
+        "type": "OllamaGranite",
+        "data": {
+          "node": {
+            "template": {
+              "model": "granite3.3:2b",
+              "prompt": "{prompt-template-1.output}",
+              "temperature": 0.1
+            }
+          }
+        }
+      },
+      {
+        "id": "chat-output-1",
+        "type": "ChatOutput",
+        "data": {
+          "node": {
+            "template": {
+              "response": "{ollama-granite-1.output}"
+            }
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "chat-input-1",
+        "target": "docling-retriever-1",
+        "field": "query"
+      },
+      {
+        "source": "docling-retriever-1",
+        "target": "prompt-template-1",
+        "field": "docling-retriever-1.output"
+      },
+      {
+        "source": "chat-input-1",
+        "target": "prompt-template-1",
+        "field": "chat-input-1.message"
+      },
+      {
+        "source": "prompt-template-1",
+        "target": "ollama-granite-1",
+        "field": "prompt"
+      },
+      {
+        "source": "ollama-granite-1",
+        "target": "chat-output-1",
+        "field": "response"
+      }
+    ]
+  }
+}
