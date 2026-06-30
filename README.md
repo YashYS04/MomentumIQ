@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚽ MomentumIQ
+# MomentumIQ
 
 ### *Demystifying match dynamics, explaining football intelligently.*
 
@@ -17,8 +17,6 @@
 <br />
 
 MomentumIQ is a premium, human-centered football intelligence companion and interactive journal built for the FIFA World Cup. By translating complex match telemetry, tactical formations, and spatial coordinates into clear, structured narratives, MomentumIQ bridges the gap between raw data and the beautiful game.
-
-[Explore Dashboard](http://localhost:5173) • [Technical Architecture](#-technical-architecture) • [AI & Technical Approach](#-ai--technical-approach) • [Setup Instructions](#-getting-started)
 
 </div>
 
@@ -141,7 +139,7 @@ momentum-iq/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 > [!IMPORTANT]
 > **System Requirements:** Ensure you have **Python 3.10+** and **Node.js v18+** installed on your system. MomentumIQ runs all models locally for privacy and cost efficiency.
@@ -182,4 +180,4 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-<p align="center">Made with ❤️ by the MomentumIQ Team</p>
+<p align="center">Made with ❤️ by Me/p>
